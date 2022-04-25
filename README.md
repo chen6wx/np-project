@@ -1,11 +1,11 @@
 # np-project
 CS412 Final Project
-This project will explore an known NP-complete problem and will consist of the following components:
+This project will explore the Vertex Cover NP problem and we will each do one of the following components:
 
-    Problem presentation explaining the problem to be solved and its reduction to another accepted NP-complete problem.
-    Exact Solution Code -- develop code that exactly solves the problem.
-    Approximation presentation -- show an approximation algorithm for this problem and analyze it.
-    Approximation code --  develop code that performs this approximation
+    Problem presentation explaining the problem to be solved and its reduction to another accepted NP-complete problem - Will Chen
+    Exact Solution Code -- develop code that exactly solves the problem - Andrew Toske
+    Approximation presentation -- show an approximation algorithm for this problem and analyze it - Chase Briles
+    Approximation code --  develop code that performs this approximation - Alex Guilliams
     Evaluation of Other Projects  -- you will submit 2 reviews of other projects.   This will include submitting some questions about the project before hand and also providing a review of the project's findings/presentation.
 
 The section below detail each of these components.  
