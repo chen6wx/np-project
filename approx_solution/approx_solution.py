@@ -1,6 +1,6 @@
 '''
     name: Alex Guilliams
-    Approximation code for Vertex Cover.
+    Approximation code for Vertex Cover. Program type = greedy
     Used code/information from:
     https://www.geeksforgeeks.org/vertex-cover-problem-set-1-introduction-approximate-algorithm-2/
     http://tandy.cs.illinois.edu/dartmouth-cs-approx.pdf
