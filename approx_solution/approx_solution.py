@@ -1,6 +1,6 @@
 '''
     name: Alex Guilliams
-    Approximation code for Vertex Cover. Program type = greedy
+    Approximation code for Vertex Cover.
     Used code/information from:
     https://www.geeksforgeeks.org/vertex-cover-problem-set-1-introduction-approximate-algorithm-2/
     http://tandy.cs.illinois.edu/dartmouth-cs-approx.pdf
@@ -8,6 +8,13 @@
 '''
 
 from collections import defaultdict
+g = {}
+
+def addEdges(u, vertices):
+    if u not in g:
+        g[u] = []
+    for v in vertices:
+        g[u].append(v)
 
 def approxVertexCover(g):
         
@@ -47,17 +54,12 @@ def approxVertexCover(g):
     print()
 
 def main():
-    
-    # Code to create a graph and call it from this file for now, will likely be gone when we create our test cases in a seperate file.
-    g = {}
-    g[0] = [1, 2]
-    g[1] = [0, 3]
-    g[2] = [0]
-    g[3] = [1, 4]
-    g[4] = [3, 5]
-    g[5] = [4, 6]
-    g[6] = [5]
+
+    n = int(input())
+    lines = [[int(x) for x in input().split()] for _ in range(n)]
+    for line in lines:
+        addEdges(line[0], line[1:])
     approxVertexCover(g)
- 
+
 if __name__ == "__main__":
     main()
