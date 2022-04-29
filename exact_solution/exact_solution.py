@@ -52,21 +52,26 @@ def main():
     # addEdges(3, [4])
     # addEdges(4, [1, 2, 3])
 
-    addEdges(0, [1])
-    addEdges(1, [11, 8])
-    addEdges(2, [11, 14])
-    addEdges(3, [12, 4])
-    addEdges(4, [3, 5])
-    addEdges(5, [9, 4])
-    addEdges(6, [10])
-    addEdges(7, [10])
-    addEdges(8, [1, 10])
-    addEdges(9, [13, 5])
-    addEdges(10, [8, 7, 6])
-    addEdges(11, [1, 2, 13])
-    addEdges(12, [3, 13])
-    addEdges(13, [14, 11, 12, 9, 10])
-    addEdges(14, [2, 13])
+    # addEdges(0, [1])
+    # addEdges(1, [11, 8])
+    # addEdges(2, [11, 14])
+    # addEdges(3, [12, 4])
+    # addEdges(4, [3, 5])
+    # addEdges(5, [9, 4])
+    # addEdges(6, [10])
+    # addEdges(7, [10])
+    # addEdges(8, [1, 10])
+    # addEdges(9, [13, 5])
+    # addEdges(10, [8, 7, 6])
+    # addEdges(11, [1, 2, 13])
+    # addEdges(12, [3, 13])
+    # addEdges(13, [14, 11, 12, 9, 10])
+    # addEdges(14, [2, 13])
+
+    n = int(input())
+    lines = [[int(x) for x in input().split()] for _ in range(n)]
+    for line in lines:
+        addEdges(line[0], line[1:])
 
     min = float('inf')
     min_vertices = []
@@ -79,8 +84,6 @@ def main():
                 min_vertices = subset
     print(min)
     print(min_vertices)
-
-
 
  
 if __name__ == "__main__":
