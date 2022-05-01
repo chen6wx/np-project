@@ -1,9 +1,9 @@
 '''
     name: Andrew Toske
     Exact code for Vertex Cover.
-    Used code/information from:
-    https://www.delftstack.com/howto/python/powerset-python/
 '''
+import itertools
+
 graph = {}
 edges = []
 
@@ -16,13 +16,6 @@ def addEdges(u, vertices):
         edge = sorted([u, v])
         if edge not in edges:
             edges.append(edge)
-
-#Find all subsets for given vertices - O(2^V)
-def subs(vertices):
-    if vertices == []:
-        return [[]]
-    x = subs(vertices[1:])
-    return x + [[vertices[0]] + y for y in x]
 
 #Check if given vertices cover every edge
 def covers(graph, vertices):
@@ -74,17 +67,17 @@ def main():
         addEdges(line[0], line[1:])
 
     min = float('inf')
-    min_vertices = []
-    subsets = subs([*graph])
-    for subset in subsets:
-        if covers(graph, subset):
-            n = len(subset)
-            if n < min:
-                min = n
-                min_vertices = subset
+    for i in range(len(graph)):
+        for x in itertools.combinations([*graph],i):
+            subset = list(x)
+            if (covers(graph, subset)):
+                min = subset
+                break
+        if min != float('inf'):
+            break
+    print(len(min))
     print(min)
-    print(min_vertices)
 
- 
+
 if __name__ == "__main__":
     main()
